@@ -1,0 +1,210 @@
+main{
+    div.flexible{
+        @include breakpoint(tablet){
+            display:  flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 36px;
+        }
+        div.hero{
+            margin-top: 38px;
+            @include breakpoint(tablet){
+                width: 398px;
+                margin-top: 0px;
+            }
+            @include breakpoint(desktopxl){
+                width: 457px;
+                margin-top: 0px;
+            }
+            h1{
+                @include title('L');
+                @include breakpoint(desktopxl){
+                    @include title("XL")
+                }
+            }
+            p{
+                @include text('M');
+                margin-top: 26px;
+                font-size: 16px;
+                @include breakpoint(tablet){
+                    margin-top: 25px;
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 18px;
+                }
+            }
+            button{
+                @include button2;
+                margin-top: 24px;
+                font-size: 16px;
+                @include breakpoint(tablet){
+                    margin-top: 25px;
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 18px;
+                }
+            }
+        }
+        aside{
+            width: 327px;
+            height: 301px;
+            position: relative;
+            background-image: url(img/asidemini.png);
+            background-position: top 24px right 37px;
+            background-size: 253px 253px;
+            background-repeat: no-repeat;
+
+            @include breakpoint(tablet){
+                width: 327px;
+                height: 470px;
+                background-size: 0px 0px;
+
+            }
+            div{
+                width: max-content;
+                padding: 20px 16px;
+                border-radius: 10px;
+                background: $white;
+                box-shadow: 0px 34px 54px 0px rgba(6, 22, 141, 0.16);
+                @include breakpoint(desktopxl){
+                    border-radius: 15px;
+                    padding: 20px 57px 20px 24px;
+                }
+                p{
+                    @include text('S');
+                }
+                h2{
+                    @include title('M');
+                    @include breakpoint(desktopxl){
+                        @include title('L');
+                    }
+                }
+
+            }
+            div:nth-of-type(1){
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                @include breakpoint(desktopxl){
+                    top: 95px;
+                    right: -100px;
+                }
+                
+            }
+            div:nth-of-type(2){
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                @include breakpoint(desktopxl){
+                    left: -80px;
+                    bottom: 31px;
+                }
+                p{
+                    margin-right: 25px;
+                    @include breakpoint(desktopxl){
+                        margin-right: 15px;
+                    }
+                }
+                h2{
+                    margin-right: 35px;
+                    @include breakpoint(desktopxl){
+                        margin-right: 18px;
+                    }
+                }
+            }
+        }
+    }
+    section.details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: right;
+        margin-top: 66px;
+        background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+        gap: 16px;
+        padding-bottom: 80px;
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr; 
+            column-gap: 10px; 
+            row-gap: 32px;
+            margin-left: 0px;
+            margin-right: 0px; 
+            padding-left: 39px;
+            padding-right: 39px;
+            margin-top: 99px;
+            padding-bottom: 86px;
+        }
+
+            @include breakpoint(desktopxl){
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr; 
+            column-gap: 30px; 
+            row-gap: 80px;
+            margin-left: 0px;
+            margin-right: 0px; 
+            padding-left: 165px;
+            padding-right: 165px;
+            margin-top: 99px;
+            padding-bottom: 86px;
+        }
+        h2{
+            border-radius: 10px;
+            background-image: $gradient-pink; 
+            padding: 24px 29px 31px 28px;
+            @include title('S');
+            color: $white;
+            margin-bottom: 16px;
+            height: 100%;
+            @include breakpoint(tablet){
+                padding-top: 56px;
+                padding-left: 32px;
+                margin-bottom: 0px;
+            }
+            @include breakpoint(desktopxl){
+                @include title('M');
+                color: $white;
+            }
+        }
+        article{
+
+            padding: 0px 28px 32px 28px;
+            border-radius: 10px;
+            background: $white;
+            box-shadow: -24px 25px 50px 0px rgba(6, 22, 141, 0.04);
+            img{
+                width: 56px;
+                height: 56px;
+            }
+            h3{
+                @include title('S');
+                margin-top: 24px;
+                font-size: 20px;
+                @include breakpoint(desktopxl){
+                    font-size: 24px;
+                    margin-top: 32px;
+                }
+            }
+            p{
+                @include text('M');
+                margin-top: 16px;
+                font-size: 16px;
+                margin-bottom: 24px;
+                @include breakpoint(desktopxl){
+                    font-size: 16px;
+                    margin-top: 24px;
+                }
+            }
+            a{
+                @include text('S');
+                text-decoration: none;
+                font-size: 18px;
+                color: $pink;
+            }
+
+        }
+    }
+}

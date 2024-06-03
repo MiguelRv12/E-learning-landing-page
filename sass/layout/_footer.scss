@@ -1,0 +1,46 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $dark-blue;
+    height: 120px;
+    flex-shrink: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    @include breakpoint(tablet){
+        padding-left: 40px;
+        padding-right: 39px;
+    }
+    @include breakpoint(desktopxl){
+        padding-left: 165px;
+        padding-right: 165px;
+    }
+    img{
+        min-width: 89px;
+        margin-top: 43px;
+        margin-bottom: 42px;
+    }
+    button{
+        @include button3;
+        margin-left: 114px;
+        margin-top: 36px;
+        margin-bottom: 36px;
+        padding: 9px 24px 11px 24px;
+        width: 140px;
+        height: 48px;
+        @include breakpoint(desktopxl){
+            width: 167px;
+            height: 56px;
+            font-size: 18px;
+            padding: 14px 31px 14px 32px;
+        }
+        a{
+            font-size: 14px;
+            @include breakpoint(desktopxl){
+                font-size: 18px;
+            }
+        }
+        
+    }
+}
